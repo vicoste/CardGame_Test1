@@ -13,7 +13,7 @@ class Hand
 public:
     Hand();
 private:
-    std::list<Card> fullDeck;
+    std::list<Card> fullHand;
 };
 
 #endif // HAND_H

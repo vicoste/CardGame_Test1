@@ -3,26 +3,26 @@
 
 #include <QObject>
 #include <string>
-
+#include <QDebug>
+#include <QPoint>
 
 
 using namespace std;
 
- class Card : public QObject
+ class Card
 {
-    Q_OBJECT
-     Q_PROPERTY(type name READ getName WRITE setName NOTIFY nameChanged)
-     Q_PROPERTY(int cost READ getCost WRITE setCost NOTIFY costChanged)
+
 
 public:
-    Card();//string name, int cost, string imgPath);
+
+    explicit Card(string name, int cost, string imgPath);
 
     void setName(string name);
     string getName();
     void setCost(int cost);
     int getCost();
-    //string GetImgPath(string path);
-    //void SetImgPath();
+    string GetImgPath(string path);
+    void SetImgPath();
 
 signals:
     void nameChanged();
@@ -30,9 +30,9 @@ signals:
 
 private:
 
-    /*string name;
+    string name;
     int cost;
-    string imgPath;*/
+    string imgPath;
 
 
 };

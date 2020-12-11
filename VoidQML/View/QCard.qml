@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtQuick.Window 2.12
+import QtQuick.Controls 2.1
 
 Item {
     property  string id
@@ -15,7 +17,13 @@ Item {
            anchors.fill: parent
            hoverEnabled:true
            onHoveredChanged: hover = !hover
-           onClicked:  vide = !vide
+           onClicked: { vide = !vide
+
+                        mycard.testenvoi(96)
+               mycard.test()
+                    cout = mycard.testreturn()
+
+           }
     }
 
     Rectangle{
@@ -37,9 +45,9 @@ Item {
 
         }
 
-        CardAttribut{
+        QCardAttribut{
             id:rectPV
-            attribut: pv
+            attribut:pv
             height: parent.height /8
             width: parent.width /8
             anchors.right: parent.right
@@ -49,7 +57,7 @@ Item {
 
         }
 
-        CardAttribut{
+        QCardAttribut{
             id:rectRiposte
             attribut: riposte
             height: parent.height /8
@@ -62,7 +70,7 @@ Item {
         }
 
 
-        CardAttribut{
+        QCardAttribut{
             id:rectAttaque
             attribut: attaque
             height: parent.height /8
@@ -75,7 +83,7 @@ Item {
         }
 
 
-        CardAttribut{
+        QCardAttribut{
             id:rectCout
             attribut: cout
             height: parent.height /6
@@ -90,8 +98,8 @@ Item {
         Popup {
                id: popup
 
-               anchors.top: parent.top
-               anchors.left : parent.right
+              /* anchors.top: parent.top
+               anchors.left : parent.right*/
                visible: hover
 
 

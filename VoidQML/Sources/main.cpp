@@ -1,6 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "Sources/Model/card.h"
+#include <QQmlContext>
+#include <QQmlEngine>
+
+#include "Sources/Controller/cardcontroller.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +21,8 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    qmlRegisterType<Card>("CCard",1,0,"Ccard");
+    //qmlRegisterType<Card>("CCard",1,0,"Ccard");
+    QScopedPointer<CardController> card(new CardController);
 
     const QUrl url(QStringLiteral("qrc:/View/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -26,9 +30,10 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+
     engine.load(url);
 
-
+    engine.rootContext()->setContextProperty("mycard", card.data());
 
     return app.exec();
 }

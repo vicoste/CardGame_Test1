@@ -7,6 +7,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        Sources/Controller/cardcontroller.cpp \
         Sources/Model/card.cpp \
         Sources/Model/deck.cpp \
         Sources/Model/emplacement.cpp \
@@ -28,12 +29,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    Sources/Controller/cardcontroller.h \
     Sources/Model/card.h \
     Sources/Model/deck.h \
     Sources/Model/emplacement.h \
     Sources/Model/hand.h \
     Sources/Model/includes.h \
-    Sources/Model/player.h
+    Sources/Model/player.h \
+
 
 DISTFILES += \
     View/Board.qml \

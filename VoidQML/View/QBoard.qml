@@ -10,7 +10,7 @@ Item {
         color:color
         anchors.fill:parent
 
-        Card{
+        QCard{
             id : card1
             imgPath: Ccard.cost
             height: parent.height /4
@@ -20,7 +20,7 @@ Item {
 
         }
 
-        Card{
+        QCard{
             id : card2
             imgPath: "img/res/img/soldier2.png"
             height: parent.height /4
@@ -30,7 +30,7 @@ Item {
 
         }
 
-        Card{
+        QCard{
             imgPath: "img/res/img/soldier3.png"
             id : card3
             height: parent.height /4

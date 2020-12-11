@@ -1,17 +1,21 @@
 <RCC>
     <qresource prefix="/">
-        <file>View/Board.qml</file>
-        <file>View/Card.qml</file>
-        <file>View/CardAttribut.qml</file>
-        <file>View/Hand.qml</file>
+        <file>View/QBoard.qml</file>
+        <file>View/QCard.qml</file>
+        <file>View/QCardAttribut.qml</file>
+        <file>View/QHand.qml</file>
         <file>View/main.qml</file>
-        <file>View/Popup.qml</file>
+        <file>View/QPopup.qml</file>
         <file>View/TestCreate.js</file>
         <file>View/Sprite.qml</file>
+        <file>res/cards/everyCards.xml</file>
     </qresource>
     <qresource prefix="/img">
         <file>res/img/soldier1.png</file>
         <file>res/img/soldier2.png</file>
         <file>res/img/soldier3.png</file>
+    </qresource>
+    <qresource prefix="/cards">
+        <file>res/cards/everyCards.xml</file>
     </qresource>
 </RCC>

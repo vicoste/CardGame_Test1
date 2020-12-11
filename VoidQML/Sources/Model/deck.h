@@ -7,13 +7,21 @@
 
 
 using namespace std;
+
 class Deck
 {
 public:
-    Deck();
+    explicit Deck();
+
+    void shuffle();
+    Card draw();
+    void addCard(Card card);
+
+
 
 private:
-    //std::list<Card> fullDeck;
+    std::list<Card> fullDeck;
+
 };
 
 #endif // DECK_H

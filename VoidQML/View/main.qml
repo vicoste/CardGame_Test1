@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
+import QtQuick.Controls 2.1
 import "TestCreate.js" as Js
 
 Window {
@@ -13,12 +14,11 @@ Window {
     minimumHeight: 600
 
 
-    Component.onCompleted: Js.createSpriteObjects();
+    //Component.onCompleted: mycard.test()
 
 
 
-
-        Rectangle{
+Rectangle{
             id:rectRed
 
            // anchors.left: it.left
@@ -34,9 +34,9 @@ Window {
 
 
 
-            Card{
+            QCard{
                 id : card1
-                imgPath: "../img/res/img/soldier1.png"
+                //imgPath: "../img/res/img/soldier1.png"
                 height: parent.height /4
                 width: parent.width/4
                 anchors.right: parent.right
@@ -45,9 +45,9 @@ Window {
 
             }
 
-            Card{
+            QCard{
                 id : card2
-                imgPath: "../img/res/img/soldier2.png"
+                //imgPath: "../img/res/img/soldier2.png"
                 height: parent.height /4
                 width: parent.width/4
                 anchors.right: parent.right
@@ -55,8 +55,8 @@ Window {
 
             }
 
-            Card{
-                imgPath: "../img/res/img/soldier3.png"
+            QCard{
+                //imgPath: "../img/res/img/soldier3.png"
                 id : card3
                 height: parent.height /4
                 width: parent.width/4
@@ -81,10 +81,10 @@ Window {
         }
 
 
-        Timer{
+      /*  Timer{
             running: true
             interval: 2000
             onTriggered: txt.text = "changement"
-        }
+        }*/
 
 }
