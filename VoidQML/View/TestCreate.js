@@ -1,17 +1,17 @@
 var component;
 var sprite;
 
-function createSpriteObjects() {
-    component = Qt.createComponent("Sprite.qml");
+function createSpriteObjects(x, y) {
+    component = Qt.createComponent("QCard.qml");
    if (component.status == Component.Ready)
-        finishCreation();
+        finishCreation(x,y);
     else
-        component.statusChanged.connect(finishCreation);
+        component.statusChanged.connect(finishCreation(x,y));
 }
 
-function finishCreation() {
+function finishCreation(a, b) {
     if (component.status == Component.Ready) {
-        sprite = component.createObject(appWindow, {x: 100, y: 100});
+        sprite = component.createObject(appWindow, {x: a, y: b});
         if (sprite == null) {
             // Error Handling
             console.log("Error creating object");

@@ -1,3 +1,15 @@
-<card pv="10" atk="2" rip="2" cost="5">soldat</card>
-<card pv="10" atk="5" rip="0" cost="5">tireur</card>
-<card pv="5" atk="3" rip="2" cost="5">volant</card>
+<card pv='10' atk='2' rip='2' cost='5'>
+    <name>soldat</name>
+    <description>soldat de la legion étrangère</description>
+    <image>:/img/res/img/soldier1.png</image>
+</card>
+<card pv='10' atk='5' rip='0' cost='5'>
+    <name>tireur</name>
+    <description>sniper d'elite</description>
+    <image>:/img/res/img/soldier2.png</image>
+</card>
+<card pv='5' atk='3' rip='2' cost='5'>
+    <name>griffon</name>
+    <description>bete volante</description>
+    <image>:/img/res/img/soldier3.png</image>
+</card>

@@ -17,71 +17,56 @@ Window {
     //Component.onCompleted: mycard.test()
 
 
+    Rectangle{
 
-Rectangle{
-            id:rectRed
+        id:sideMenu
+        height: parent.height
+        width: 200
+        color :"white"
+        visible: true
 
-           // anchors.left: it.left
-           // anchors.top: it.top
-
-            height: parent.height
-            width: parent.width/2
-            z:1
-           // anchors.bottom: it.bottom
-            color: "red"
-            visible: true
-
-
-
-
-            QCard{
-                id : card1
-                //imgPath: "../img/res/img/soldier1.png"
-                height: parent.height /4
-                width: parent.width/4
-                anchors.right: parent.right
-                anchors.top: parent.top
-
-
-            }
-
-            QCard{
-                id : card2
-                //imgPath: "../img/res/img/soldier2.png"
-                height: parent.height /4
-                width: parent.width/4
-                anchors.right: parent.right
-                 anchors.top: card1.bottom
-
-            }
-
-            QCard{
-                //imgPath: "../img/res/img/soldier3.png"
-                id : card3
-                height: parent.height /4
-                width: parent.width/4
-                anchors.right: parent.right
-                 anchors.top: card2.bottom
-
-            }
-
-
-        }
-
-        Rectangle{
-            id: rectBlue
-            color: "blue"
-
-            height: parent.height
-            width: parent.width/2
-
-            visible: true
-
-            anchors.left: rectRed.right
+        Button{
+            id: bpjouer
+            text: "JOUER"
+            onClicked: load.source = "QBoard.qml"
         }
 
 
-      /*  Timer{
+        Button{
+            id:bpDeck
+            text: "DECKBUILDER"
+            anchors.top: bpjouer.bottom
+            onClicked: load.source = "QDeckBuilder.qml"
+        }
+
+
+        Button{
+            id:bpCard
+            text: "CARD CREATOR"
+            anchors.top: bpDeck.bottom
+        }
+
+
+    }
+
+    Image {
+        id: img
+        source: "qrc:/img/res/img/epix.jpg"
+
+      anchors.left: sideMenu.right
+      width: parent.width - sideMenu.width
+      height: parent.height
+
+        visible: true
+    Loader{
+        id: load
+        anchors.fill: parent
+
+    }
+}
+
+
+    /*  Timer{
             running: true
             interval: 2000
             onTriggered: txt.text = "changement"

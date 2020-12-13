@@ -15,25 +15,44 @@ using namespace std;
 
 public:
 
-    explicit Card(string name, int cost, string imgPath);
+    explicit Card(QString name, int pv, int atk, int rip, int cost, QString desc, QString imgPath);
 
-    void setName(string name);
-    string getName();
-    void setCost(int cost);
-    int getCost();
-    string GetImgPath(string path);
-    void SetImgPath();
+    string toString();
 
-signals:
+    int getPv() const;
+    void setPv(int value);
+
+    QString getName() const;
+    void setName(const QString &value);
+
+    int getCost() const;
+    void setCost(int value);
+
+    QString getImgPath() const;
+    void setImgPath(const QString &value);
+
+    int getRiposte() const;
+    void setRiposte(int value);
+
+    int getAttack() const;
+    void setAttack(int value);
+
+    QString getDescription() const;
+    void setDescription(const QString &value);
+
+ signals:
     void nameChanged();
     void costChanged();
 
-private:
+ private:
 
-    string name;
+    QString name;
     int cost;
-    string imgPath;
-
+    QString imgPath;
+    int pv;
+    int riposte;
+    int attack;
+    QString description;
 
 };
 

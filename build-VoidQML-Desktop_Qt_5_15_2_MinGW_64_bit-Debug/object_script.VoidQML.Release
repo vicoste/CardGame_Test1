@@ -1,0 +1,11 @@
+release/cardcontroller.o
+release/xmlcontroller.o
+release/card.o
+release/cardslibrary.o
+release/deck.o
+release/emplacement.o
+release/hand.o
+release/player.o
+release/main.o
+release/qrc_qml.o
+release/moc_cardcontroller.o

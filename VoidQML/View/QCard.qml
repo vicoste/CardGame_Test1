@@ -9,8 +9,9 @@ Item {
     property int cout: 80
     property int attaque: 3
     property string imgPath
+    property string name
     property bool hover: false
-    property bool vide: true
+    property bool vide: false
     anchors.margins: 10
 
    MouseArea{
@@ -33,7 +34,7 @@ Item {
 
         border.width: 5
         border.color:hover ? "green" : "black"
-        color: "white"
+        color: "black"
 
         Image {
             anchors.margins: 5
@@ -95,6 +96,14 @@ Item {
 
         }
 
+        Text {
+            id: nom
+            text: qsTr(name)
+            verticalAlignment: Text.AlignVCenter
+            anchors.bottom: parent.bottom
+            height: 12
+
+        }
         Popup {
                id: popup
 

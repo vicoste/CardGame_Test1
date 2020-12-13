@@ -3,10 +3,12 @@
 #include <QQmlContext>
 #include <QQmlEngine>
 
-#include "Sources/Controller/cardcontroller.h"
+#include "Sources/Model/cardslibrary.h"
+#include "Sources/Controller/QML/cardcontroller.h"
 
 int main(int argc, char *argv[])
 {
+
 
     //-----------custom code
 /*
@@ -15,6 +17,29 @@ int main(int argc, char *argv[])
     Card *c3 = new Card("c3",3,"img/res/img/soldier3.png");
 
    */
+    //XMLController *x = new XMLController(":/cards/res/cards/everyCards.xml");
+    //x->loadCards();
+
+/*
+    qDebug() << "    -            - ";
+    qDebug() << "   -  -         -  - ";
+    qDebug() << " -       -    -       - ";
+    qDebug() << "  -        --        - ";
+    qDebug() << "    -               - ";
+    qDebug() << "       -          - ";
+    qDebug() << "          -     - ";
+    qDebug() << "             - ";
+
+*/
+    Card c1 = CardsLibrary::GetInstance()->GetCard(0);
+    qDebug() << c1.toString().c_str();
+
+    Card c2 = CardsLibrary::GetInstance()->GetCard(1);
+    qDebug() << c2.toString().c_str();
+
+    Card c3 = CardsLibrary::GetInstance()->GetCard(2);
+    qDebug() << c3.toString().c_str();
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
@@ -30,6 +55,7 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+
 
     engine.load(url);
 

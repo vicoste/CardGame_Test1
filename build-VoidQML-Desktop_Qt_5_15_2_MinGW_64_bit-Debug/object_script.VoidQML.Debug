@@ -1,0 +1,11 @@
+debug/cardcontroller.o
+debug/xmlcontroller.o
+debug/card.o
+debug/cardslibrary.o
+debug/deck.o
+debug/emplacement.o
+debug/hand.o
+debug/player.o
+debug/main.o
+debug/qrc_qml.o
+debug/moc_cardcontroller.o

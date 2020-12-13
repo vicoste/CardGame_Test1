@@ -8,12 +8,13 @@
         <file>View/QPopup.qml</file>
         <file>View/TestCreate.js</file>
         <file>View/Sprite.qml</file>
-        <file>res/cards/everyCards.xml</file>
+        <file>View/QDeckBuilder.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>res/img/soldier1.png</file>
         <file>res/img/soldier2.png</file>
         <file>res/img/soldier3.png</file>
+        <file>res/img/epix.jpg</file>
     </qresource>
     <qresource prefix="/cards">
         <file>res/cards/everyCards.xml</file>
