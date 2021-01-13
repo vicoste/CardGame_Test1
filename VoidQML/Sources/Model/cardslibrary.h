@@ -43,6 +43,7 @@ public:
 
     Card GetCard(int index);
 
+    int GetCardsNumber();
 
     void update();
 

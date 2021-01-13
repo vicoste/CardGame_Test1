@@ -25,3 +25,8 @@ Card CardsLibrary::GetCard(int index)
 {
     return cards_->at(index);
 }
+
+int CardsLibrary::GetCardsNumber()
+{
+    return cards_->size();
+}

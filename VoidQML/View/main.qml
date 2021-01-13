@@ -44,7 +44,16 @@ Window {
             id:bpCard
             text: "CARD CREATOR"
             anchors.top: bpDeck.bottom
+
         }
+
+        Button{
+            id:bpTEST
+            text: "TEST"
+            anchors.top: bpCard.bottom
+            onClicked: load.source = "QTest.qml"
+        }
+
 
 
     }

@@ -25,6 +25,12 @@ public:
 */
     Q_INVOKABLE int requestCardCost(int cardID);
     Q_INVOKABLE QString requestCardName(int cardID);
+    Q_INVOKABLE int requestCardAtk(int cardID);
+    Q_INVOKABLE int requestCardPv(int cardID);
+    Q_INVOKABLE int requestCardRip(int cardID);
+    Q_INVOKABLE QString requestCardImg(int cardID);
+
+    Q_INVOKABLE int numberOfCards();
 
 private :
     int cost;

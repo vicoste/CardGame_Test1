@@ -12,6 +12,8 @@ Item {
     property string name
     property bool hover: false
     property bool vide: false
+
+    property int fontsize :10
     anchors.margins: 10
 
    MouseArea{
@@ -34,7 +36,7 @@ Item {
 
         border.width: 5
         border.color:hover ? "green" : "black"
-        color: "black"
+        //color: "black"
 
         Image {
             anchors.margins: 5
@@ -99,9 +101,10 @@ Item {
         Text {
             id: nom
             text: qsTr(name)
-            verticalAlignment: Text.AlignVCenter
+            //anchors.verticalCenter:parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            height: 12
+            font.pointSize: fontsize
 
         }
         Popup {

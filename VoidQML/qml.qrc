@@ -9,6 +9,7 @@
         <file>View/TestCreate.js</file>
         <file>View/Sprite.qml</file>
         <file>View/QDeckBuilder.qml</file>
+        <file>View/QTest.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>res/img/soldier1.png</file>
