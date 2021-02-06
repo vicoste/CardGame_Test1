@@ -10,12 +10,15 @@ Window {
     visible: true
     title: qsTr("Hello World")
     //color : "yellow"
-    minimumWidth: 800
-    minimumHeight: 600
-
+    minimumWidth: 960
+    minimumHeight: 540
+    maximumWidth: 1920
+    maximumHeight: 1080
+    on
 
     //Component.onCompleted: mycard.test()
-
+    onWidthChanged: height = width *( maximumHeight/maximumWidth)
+    onHeightChanged: width = height *( maximumWidth/maximumHeight)
 
     Rectangle{
 
@@ -44,6 +47,7 @@ Window {
             id:bpCard
             text: "CARD CREATOR"
             anchors.top: bpDeck.bottom
+            onClicked: load.source = "QCardCreator.qml"
 
         }
 
