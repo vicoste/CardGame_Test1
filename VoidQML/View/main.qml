@@ -14,7 +14,6 @@ Window {
     minimumHeight: 540
     maximumWidth: 1920
     maximumHeight: 1080
-    on
 
     //Component.onCompleted: mycard.test()
     onWidthChanged: height = width *( maximumHeight/maximumWidth)

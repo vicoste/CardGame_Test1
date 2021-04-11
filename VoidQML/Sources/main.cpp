@@ -5,32 +5,21 @@
 
 #include "Sources/Model/cardslibrary.h"
 #include "Sources/Controller/QML/cardcontroller.h"
+#include "Sources/Client/client.h"
 
 int main(int argc, char *argv[])
 {
+   /* ------TEST CLIENT SERVEUR
+    * QCoreApplication a(argc, argv);
 
+        Client cTest;
+        cTest.Connect();
 
-    //-----------custom code
-/*
-    Card *c1 = new Card("c1",1,"img/res/img/soldier1.png");
-    Card *c2 = new Card("c2",2,"img/res/img/soldier2.png");
-    Card *c3 = new Card("c3",3,"img/res/img/soldier3.png");
+        return a.exec();
 
-   */
-    //XMLController *x = new XMLController(":/cards/res/cards/everyCards.xml");
-    //x->loadCards();
-
-/*
-    qDebug() << "    -            - ";
-    qDebug() << "   -  -         -  - ";
-    qDebug() << " -       -    -       - ";
-    qDebug() << "  -        --        - ";
-    qDebug() << "    -               - ";
-    qDebug() << "       -          - ";
-    qDebug() << "          -     - ";
-    qDebug() << "             - ";
 
 */
+    /* ----- CORE APPLI
     Card c1 = CardsLibrary::GetInstance()->GetCard(0);
     qDebug() << c1.toString().c_str();
 
@@ -61,5 +50,5 @@ int main(int argc, char *argv[])
 
     engine.rootContext()->setContextProperty("mycard", card.data());
 
-    return app.exec();
+    return app.exec();*/
 }
